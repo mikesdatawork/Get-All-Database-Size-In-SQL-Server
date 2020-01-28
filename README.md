@@ -1,4 +1,6 @@
-![MIKES DATA WORK GIT REPO](https://raw.githubusercontent.com/mikesdatawork/images/master/git_mikes_data_work_banner_01.png "Mikes Data Work")        # Get All Database Size In SQL Server
+![MIKES DATA WORK GIT REPO](https://raw.githubusercontent.com/mikesdatawork/images/master/git_mikes_data_work_banner_01.png "Mikes Data Work")        
+
+# Get All Database Size In SQL Server
 **Post Date: Original Post: May 12, 2014**        
 
 ## Contents    
@@ -8,20 +10,12 @@
 - [Author](#Author)  
 - [License](#License)       
 
-## About-Process    <div>  
-Use this script to get the database size of ALL databases.
+## About-Process <p>
+  Use this script to get the database size of ALL databases.
 ---
 ## SQL-Logic
 ```SQL
-1
-2
-3
-4
-5
-6
-7
-8
-9	select
+  select
 'database' = db_name(database_id)
 , 'size in gb' = convert(decimal(10,2),(sum(size * 8.00) / 1024.00 / 1024.00)) from
 sys.master_files
